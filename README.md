@@ -2,9 +2,9 @@
 
 Jason Taylor and Mukesh Murugan
 <br/>
-https://github.com/jasontaylordev/DeviceManager
+https://github.com/jasontaylordev/CleanArchitecture
 <br/>
-https://github.com/iammukeshm/DeviceManager.WebApi
+https://github.com/iammukeshm/CleanArchitecture.WebApi
 
 ## Run Application
 For simple run, or from Visual Studio run WebApi with kestrel or type ''dotnet run'' on your terminal at folder "src/Presentation/WebApi". 
