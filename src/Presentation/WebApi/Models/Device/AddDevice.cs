@@ -1,6 +1,8 @@
-﻿namespace DeviceManager.WebApi.Models.Device
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace DeviceManager.WebApi.Models.Device
 {
     public record AddDevice(
-        string Name, 
-        string Brand);
+        [Required][StringLength(255)] string Name,
+        [Required][StringLength(255)] string Brand);
 }

@@ -45,6 +45,7 @@
         [HttpGet("{id}", Name ="GetDeviceByIdentifier")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Get(long id)
         {
             _logger.LogDebug($"Get Device {id}");
@@ -86,6 +87,7 @@
         [HttpPut("{id}", Name = "FullUpdateDevice")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Put(long id, [FromBody] UpdateDevice request)
         {
             _logger.LogDebug($"Full Update Device {id}");
@@ -99,6 +101,7 @@
         [HttpPatch("{id}", Name = "PartialUpdateDevice")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Patch(long id, [FromBody] JsonPatchDocument<UpdateDevice> request)
         {
             _logger.LogDebug($"Partial Update Device {id}");
@@ -119,6 +122,7 @@
         [HttpDelete("{id}", Name = "DeleteDevice")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Delete(long id)
         {
             _logger.LogDebug($"Delete Device {id}");

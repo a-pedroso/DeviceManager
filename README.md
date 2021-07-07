@@ -24,6 +24,7 @@ on your browser: https://localhost:5001/swagger/index.html
 * .NET 5.0
 * ASP.NET Core 5.0
 * Entity Framework Core 5.0
+* OpenId Connect
 * Swagger
 * Serilog
 * CQRS with MediatR
