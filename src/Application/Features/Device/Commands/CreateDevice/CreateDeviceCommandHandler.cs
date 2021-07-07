@@ -9,6 +9,7 @@
     public class CreateDeviceCommandHandler : IRequestHandler<CreateDeviceCommand, Result<long>>
     {
         private readonly IDeviceRepository _deviceRepository;
+
         public CreateDeviceCommandHandler(IDeviceRepository deviceRepository)
         {
             _deviceRepository = deviceRepository;

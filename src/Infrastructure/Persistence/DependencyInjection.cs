@@ -24,11 +24,13 @@
                         configuration.GetConnectionString("DefaultConnection"),
                         b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
             }
-            
+
             #region Repositories
+
             services.AddScoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>))
                     .AddScoped<IDeviceRepository, DeviceRepository>();
-            #endregion
+
+            #endregion Repositories
 
             return services;
         }

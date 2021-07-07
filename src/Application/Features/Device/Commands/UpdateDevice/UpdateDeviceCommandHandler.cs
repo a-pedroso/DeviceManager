@@ -10,10 +10,12 @@
     public class UpdateDeviceCommandHandler : IRequestHandler<UpdateDeviceCommand, Result<long>>
     {
         private readonly IDeviceRepository _deviceRepository;
+
         public UpdateDeviceCommandHandler(IDeviceRepository deviceRepository)
         {
             _deviceRepository = deviceRepository;
         }
+
         public async Task<Result<long>> Handle(UpdateDeviceCommand request, CancellationToken cancellationToken)
         {
             var device = await _deviceRepository.GetByIdAsync(request.Id);

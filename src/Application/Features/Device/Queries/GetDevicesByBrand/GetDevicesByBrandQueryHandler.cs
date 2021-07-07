@@ -10,6 +10,7 @@
     public class GetDevicesByBrandQueryHandler : IRequestHandler<GetDevicesByBrandQuery, Result<IReadOnlyList<GetDevicesByBrandDTO>>>
     {
         private readonly IDeviceRepository _deviceRepository;
+
         public GetDevicesByBrandQueryHandler(IDeviceRepository deviceRepository)
         {
             _deviceRepository = deviceRepository;

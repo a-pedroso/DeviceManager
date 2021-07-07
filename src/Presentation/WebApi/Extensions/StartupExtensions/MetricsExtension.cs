@@ -15,7 +15,6 @@
             return services;
         }
 
-
         public static IApplicationBuilder UseMetricsExtension(this IApplicationBuilder app)
         {
             // must be after Routing, Authentication and Authorization

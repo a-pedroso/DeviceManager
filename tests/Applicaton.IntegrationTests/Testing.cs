@@ -3,19 +3,17 @@ using DeviceManager.Infrastructure.Persistence.Context;
 using DeviceManager.WebApi;
 using MediatR;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using NUnit.Framework;
-using Respawn;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
 [SetUpFixture]
 public class Testing
-{   
+{
     private static IConfigurationRoot _configuration;
     private static IServiceScopeFactory _scopeFactory;
     private static string _currentUserId;

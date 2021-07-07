@@ -12,7 +12,7 @@
 
         protected Result(bool isSuccess, IEnumerable<string> errors = null)
         {
-            if((isSuccess && errors?.Count() > 0) || (!isSuccess && errors?.Count() <= 0))
+            if ((isSuccess && errors?.Count() > 0) || (!isSuccess && errors?.Count() <= 0))
             {
                 throw new InvalidOperationException();
             }
@@ -43,9 +43,9 @@
 
         public static Result Combine(params Result[] results)
         {
-            foreach(Result result in results)
+            foreach (Result result in results)
             {
-                if (result.IsFailure) 
+                if (result.IsFailure)
                 {
                     return result;
                 }

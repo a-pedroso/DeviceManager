@@ -3,7 +3,6 @@
     using DeviceManager.Domain.Entities;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-
     public class DeviceConfiguration : BaseAuditableEntityConfiguration<Device, long>
     {
         public override void Configure(EntityTypeBuilder<Device> builder)

@@ -7,9 +7,9 @@
         public static CreateDeviceCommand ToCommand(this AddDevice addDevice)
         {
             return new CreateDeviceCommand()
-            { 
-                Name = addDevice.Name, 
-                Brand = addDevice.Brand 
+            {
+                Name = addDevice.Name,
+                Brand = addDevice.Brand
             };
         }
     }

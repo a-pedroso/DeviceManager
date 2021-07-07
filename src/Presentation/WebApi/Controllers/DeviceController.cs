@@ -42,7 +42,7 @@
         }
 
         // GET /Device/5
-        [HttpGet("{id}", Name ="GetDeviceByIdentifier")]
+        [HttpGet("{id}", Name = "GetDeviceByIdentifier")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -117,7 +117,6 @@
             return NoContent();
         }
 
-
         // DELETE /Device/5
         [HttpDelete("{id}", Name = "DeleteDevice")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -130,10 +129,9 @@
             DeleteDeviceByIdCommand cmd = new() { Id = id };
 
             _ = await _mediator.Send(cmd);
-            
+
             return NoContent();
         }
-
 
         //// GET: /Device
         //[HttpGet(Name = "ListAllDevices")]
@@ -152,6 +150,5 @@
 
         //    return Ok(response.Data);
         //}
-
     }
 }

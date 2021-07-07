@@ -5,7 +5,6 @@
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
     using System;
 
-
     public class BaseAuditableEntityConfiguration<T, TKey> : IEntityTypeConfiguration<T>
         where TKey : IEquatable<TKey>
         where T : BaseAuditableEntity<TKey>

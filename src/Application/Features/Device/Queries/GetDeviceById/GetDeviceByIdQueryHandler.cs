@@ -26,7 +26,7 @@
             }
 
             var dto = GetDeviceByIdDTO.ToDto(device);
-            
+
             return Result.Ok(dto);
         }
     }

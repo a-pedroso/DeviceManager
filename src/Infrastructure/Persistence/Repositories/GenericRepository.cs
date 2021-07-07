@@ -10,7 +10,7 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    public class GenericRepository<T, TKey> : IGenericRepository<T, TKey> 
+    public class GenericRepository<T, TKey> : IGenericRepository<T, TKey>
         where T : BaseEntity<TKey>
         where TKey : IEquatable<TKey>
     {

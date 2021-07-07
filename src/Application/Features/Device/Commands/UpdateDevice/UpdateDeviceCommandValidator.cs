@@ -4,7 +4,6 @@
 
     public class UpdateDeviceCommandValidator : AbstractValidator<UpdateDeviceCommand>
     {
-
         public UpdateDeviceCommandValidator()
         {
             RuleFor(p => p.Id)

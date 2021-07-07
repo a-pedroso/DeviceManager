@@ -12,7 +12,7 @@
 
         public static async Task EnsureDatabaseMigratedAsync(IServiceScope scope, Exception exception = null)
         {
-            if(tries == 4)
+            if (tries == 4)
             {
                 throw exception;
             }
@@ -26,7 +26,7 @@
                 using var context = scope.ServiceProvider.GetRequiredService<TdbContext>();
                 await context.Database.MigrateAsync();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 await EnsureDatabaseMigratedAsync(scope, ex);
             }

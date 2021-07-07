@@ -14,7 +14,9 @@ namespace DeviceManager.WebApi
 
     public class Program
     {
-        protected Program() { }
+        protected Program()
+        {
+        }
 
         // serilog setup
         // https://nblumhardt.com/2019/10/serilog-in-aspnetcore-3/
@@ -55,12 +57,12 @@ namespace DeviceManager.WebApi
             try
             {
                 var host = CreateHostBuilder(args).Build();
-                
-                if(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT").Equals("Development")
+
+                if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT").Equals("Development")
                     && Configuration.GetValue<bool>("RunEFCoreMigrations"))
                 {
                     using var serviceScope = host.Services.CreateScope();
-                    
+
                     var services = serviceScope.ServiceProvider;
                     using var scope = services.GetRequiredService<IServiceScopeFactory>().CreateScope();
                     await DbMigrationHelper<ApplicationDbContext>.EnsureDatabaseMigratedAsync(scope);

@@ -10,6 +10,7 @@
     public class GetAllDevicesQueryHandler : IRequestHandler<GetAllDevicesQuery, Result<IReadOnlyList<GetAllDevicesDTO>>>
     {
         private readonly IDeviceRepository _deviceRepository;
+
         public GetAllDevicesQueryHandler(IDeviceRepository deviceRepository)
         {
             _deviceRepository = deviceRepository;

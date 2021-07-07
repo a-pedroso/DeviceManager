@@ -1,5 +1,4 @@
-﻿using DeviceManager.Application.Common.Exceptions;
-using DeviceManager.Application.Features.Devices.Commands.CreateDevice;
+﻿using DeviceManager.Application.Features.Devices.Commands.CreateDevice;
 using DeviceManager.Domain.Entities;
 using FluentAssertions;
 using FluentValidation;
@@ -36,7 +35,7 @@ namespace DeviceManager.Application.IntegrationTests.Devices.Commands
             var response = await SendAsync(command);
 
             var device = await FindAsync<Device>(response.Data);
-            
+
             device.Should().NotBeNull();
             device.Id.Should().Be(response.Data);
             device.Name.Should().Be(command.Name);

@@ -74,7 +74,6 @@
                         },
                         oauthScopes.Keys.ToArray()
                     } });
-
             });
         }
 
@@ -89,7 +88,7 @@
                 options.OAuthClientSecret(configuration.GetValue<string>("Authentication:Swagger:ClientSecret"));
                 options.OAuthUsePkce();
             });
-            app.UseReDoc(options => 
+            app.UseReDoc(options =>
             {
                 options.DocumentTitle = "REDOC API DOC";
                 options.SpecUrl = "/swagger/v1/swagger.json";

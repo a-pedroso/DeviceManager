@@ -10,10 +10,12 @@
     public class DeleteDeviceByIdCommandHandler : IRequestHandler<DeleteDeviceByIdCommand, Result>
     {
         private readonly IDeviceRepository _deviceRepository;
+
         public DeleteDeviceByIdCommandHandler(IDeviceRepository deviceRepository)
         {
             _deviceRepository = deviceRepository;
         }
+
         public async Task<Result> Handle(DeleteDeviceByIdCommand request, CancellationToken cancellationToken)
         {
             var device = await _deviceRepository.GetByIdAsync(request.Id);

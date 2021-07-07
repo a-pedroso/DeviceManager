@@ -4,8 +4,8 @@
     using System;
 
     public record GetDeviceByIdDTO(
-        long Id, 
-        string Name, 
+        long Id,
+        string Name,
         string Brand,
         DateTime Created)
     {

@@ -24,7 +24,6 @@
 
         public DbSet<Device> Device { get; set; }
 
-
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
             foreach (var entry in ChangeTracker.Entries<IBaseAuditableEntity>())
@@ -35,6 +34,7 @@
                         entry.Entity.CreatedBy = _currentUserService.UserId;
                         entry.Entity.Created = _dateTime.UtcNow;
                         break;
+
                     case EntityState.Modified:
                         entry.Entity.LastModifiedBy = _currentUserService.UserId;
                         entry.Entity.LastModified = _dateTime.UtcNow;
